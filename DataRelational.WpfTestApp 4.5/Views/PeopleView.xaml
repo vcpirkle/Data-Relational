@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="DataRelational.WpfTestApp.Views.PeopleView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib" 
+    xmlns:m="clr-namespace:DataRelational.WpfTestApp.Models"
+    xmlns:vm="clr-namespace:DataRelational.WpfTestApp.ViewModels">
+	
+	<UserControl.Resources>
+		<DataTemplate x:Key="PersonItem">
+			<StackPanel Orientation="Horizontal">
+				<TextBlock TextWrapping="Wrap" Text="{Binding Salutation, Mode=Default}" Margin="0,0,4,0"/>
+				<TextBlock Text="{Binding LastName, Mode=Default}" TextWrapping="Wrap"/>
+				<TextBlock TextWrapping="Wrap" Text="." Margin="0,0,4,0"/>
+				<TextBlock Text="{Binding FirstName, Mode=Default}" TextWrapping="Wrap"/>
+				<TextBlock TextWrapping="Wrap" Text="("/>
+				<TextBlock Text="{Binding _Id, Mode=Default}" TextWrapping="Wrap"/>
+				<TextBlock TextWrapping="Wrap" Text=")"/>
+			</StackPanel>
+		</DataTemplate>
+	</UserControl.Resources>
+
+    <UserControl.DataContext>
+        <vm:PeopleViewModel />
+    </UserControl.DataContext>
+    
+    <StackPanel>
+        
+        <DockPanel>        
+    		<TextBlock Text="People: " Style="{DynamicResource LabelStyle}" />
+    		<Button Content="Add" Command="{Binding AddPersonCommand, Mode=Default}" Margin="5,0" DockPanel.Dock="Right" />
+    		<ComboBox ItemsSource="{Binding People}" ItemTemplate="{DynamicResource PersonItem}" SelectedItem="{Binding Selected}" VerticalContentAlignment="Center" />
+    	</DockPanel>
+		
+        <TextBlock Text="{Binding Selected.FullName.Value, Mode=Default}" Style="{DynamicResource LabelStyle}" />
+        
+        <UniformGrid Columns="2">
+            <TextBlock Text="First Name:" Style="{DynamicResource LabelStyle}" />
+            <TextBox Text="{Binding Selected.FirstName, Mode=Default, UpdateSourceTrigger=PropertyChanged}" Style="{DynamicResource FieldInputStyle}" />
+
+            <TextBlock Text="Middle Name:" Style="{DynamicResource LabelStyle}" />
+            <TextBox Text="{Binding Selected.MiddleName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Style="{DynamicResource FieldInputStyle}" />
+
+            <TextBlock Text="Last Name:" Style="{DynamicResource LabelStyle}" />
+            <TextBox Text="{Binding Selected.LastName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Style="{DynamicResource FieldInputStyle}" />
+            
+            <TextBlock Text="Salutation" Style="{DynamicResource LabelStyle}" />
+            <ComboBox ItemsSource="{Binding Salutations, Mode=Default}" SelectedItem="{Binding Selected.Salutation}" Margin="5" VerticalContentAlignment="Center" />
+        </UniformGrid>
+        <Button Content="Save All" Command="{Binding SaveCommand, Mode=Default}" HorizontalAlignment="Right" Padding="5,1" Height="29" />
+    </StackPanel>
+</UserControl>
