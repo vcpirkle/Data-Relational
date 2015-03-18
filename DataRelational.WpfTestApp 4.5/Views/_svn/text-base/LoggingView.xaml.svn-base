@@ -1,0 +1,23 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vm="clr-namespace:DataRelational.WpfTestApp.ViewModels" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" x:Class="DataRelational.WpfTestApp.Views.LoggingView"
+    mc:Ignorable="d">
+    
+	<UserControl.Resources>
+		<DataTemplate x:Key="LogTemplate">
+			<Border BorderThickness="1" BorderBrush="Black" CornerRadius="2" Padding="2" Margin="2">
+				<TextBlock Width="Auto" Height="Auto" Text="{Binding}" TextWrapping="Wrap"/>
+			</Border>
+		</DataTemplate>
+	</UserControl.Resources>
+    
+    <UserControl.DataContext>
+        <vm:LoggingViewModel />
+    </UserControl.DataContext>
+    
+	<DockPanel>
+    
+		<ListBox ItemsSource="{Binding LogEntries}" FontSize="10.667" FontStyle="Italic" VerticalContentAlignment="Stretch" ItemTemplate="{DynamicResource LogTemplate}" d:LayoutOverrides="Height" HorizontalContentAlignment="Stretch" ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled" />
+	</DockPanel>
+</UserControl>

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/26/DataRelational.WpfTestApp/trunk/Views
+END
+PeopleView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/26/DataRelational.WpfTestApp/trunk/Views/PeopleView.xaml
+END
+LoggingView.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/20/DataRelational.WpfTestApp/trunk/Views/LoggingView.xaml
+END
+PeopleView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/20/DataRelational.WpfTestApp/trunk/Views/PeopleView.xaml.cs
+END
+LoggingView.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/20/DataRelational.WpfTestApp/trunk/Views/LoggingView.xaml.cs
+END

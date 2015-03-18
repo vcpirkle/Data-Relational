@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/26/DataRelational.WpfTestApp/trunk/ViewModels
+END
+PeopleViewModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/26/DataRelational.WpfTestApp/trunk/ViewModels/PeopleViewModel.cs
+END
+LoggingViewModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/20/DataRelational.WpfTestApp/trunk/ViewModels/LoggingViewModel.cs
+END
+Base.cs
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/20/DataRelational.WpfTestApp/trunk/ViewModels/Base.cs
+END
