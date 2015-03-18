@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0B03A026-61D9-475C-AC5C-F8B99EA47D67}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataRelational</RootNamespace>
+    <AssemblyName>DataRelational</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Debug\DataRelational.XML</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Release\DataRelational.XML</DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <NoStdLib>false</NoStdLib>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug-Brandon|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug-Brandon\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>bin\Debug\DataRelational.XML</DocumentationFile>
+    <Optimize>true</Optimize>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\DataFieldAttribute.cs" />
+    <Compile Include="Attributes\DataFieldIndexAttribute.cs" />
+    <Compile Include="Attributes\SavableObjectAttribute.cs" />
+    <Compile Include="Cache\CacheElement.cs" />
+    <Compile Include="Cache\CacheItem.cs" />
+    <Compile Include="Cache\DataCache.cs" />
+    <Compile Include="Cache\DataKey.cs" />
+    <Compile Include="Cache\DataObjectReflection.cs" />
+    <Compile Include="Cache\DataObjectReflectionCache.cs" />
+    <Compile Include="Cache\IDataCache.cs" />
+    <Compile Include="Cache\Relationship.cs" />
+    <Compile Include="DataManager.cs" />
+    <Compile Include="DataManagerSearch.cs" />
+    <Compile Include="DataManagerSettings.cs" />
+    <Compile Include="DataObjectBuilder.cs" />
+    <Compile Include="DataReaders\IDataReader.cs" />
+    <Compile Include="DataReaders\TSqlDataReader.cs" />
+    <Compile Include="DataRelationship.cs" />
+    <Compile Include="DataWriters\TSqlDataWriter.cs" />
+    <Compile Include="Enums\CacheBehavior.cs" />
+    <Compile Include="DataObject.cs" />
+    <Compile Include="Enums\DatabaseType.cs" />
+    <Compile Include="Enums\DeleteBehavior.cs" />
+    <Compile Include="DataRelationalException.cs" />
+    <Compile Include="HistoricalDataObject.cs" />
+    <Compile Include="HistoricalCachableDataObject.cs" />
+    <Compile Include="ICacheableDataObject.cs" />
+    <Compile Include="IDataObject.cs" />
+    <Compile Include="DataObjectType.cs" />
+    <Compile Include="DataWriters\IDataWriter.cs" />
+    <Compile Include="IDataRelationsip.cs" />
+    <Compile Include="IHistoricalDataObject.cs" />
+    <Compile Include="Schema\InvalidObjectSchemaException.cs" />
+    <Compile Include="InvalidSettingsException.cs" />
+    <Compile Include="Logging.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Enums\SaveBehavior.cs" />
+    <Compile Include="Enums\UpdateBehavior.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SafeInvoke.cs" />
+    <Compile Include="CachableDataObject.cs" />
+    <Compile Include="SaveException.cs" />
+    <Compile Include="Schema\DataObjectSchema.cs" />
+    <Compile Include="Schema\DataObjectSchemaField.cs" />
+    <Compile Include="Schema\DataObjectSchemaFieldIndex.cs" />
+    <Compile Include="Schema\DataObjectSchemaFieldType.cs" />
+    <Compile Include="Schema\DataObjectSchemaIndex.cs" />
+    <Compile Include="Schema\DataObjectSchemaFactory.cs" />
+    <Compile Include="Script\ConnectionStringException.cs" />
+    <Compile Include="Script\ConnectionStringParser.cs" />
+    <Compile Include="Script\IDatabaseScripter.cs" />
+    <Compile Include="Script\ScriptCommon.cs" />
+    <Compile Include="Script\ScriptException.cs" />
+    <Compile Include="Script\ScriptManager.cs" />
+    <Compile Include="Script\SqlServerDatabaseScripter.cs" />
+    <Compile Include="Search\ComplexSearch.cs" />
+    <Compile Include="Search\ComplexSearchElement.cs" />
+    <Compile Include="Search\ComplexSearchMode.cs" />
+    <Compile Include="Search\ComplexSearchOperator.cs" />
+    <Compile Include="Search\ComplexSearchSection.cs" />
+    <Compile Include="Search\SearchBuilder.cs" />
+    <Compile Include="Search\SearchContext.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SqlServer\Index_IDX_List_Boolean.sql" />
+    <None Include="Resources\SqlServer\Index_IDX_List_BooleanValue.sql" />
+    <None Include="Resources\SqlServer\Index_IDX_List_Byte.sql" />
+    <None Include="Resources\SqlServer\Index_IDX_List_ByteValue.sql" />
+    <None Include="Resources\SqlServer\Index_IDX_List_DateTime.sql" />
+    <None Include="Resources\SqlServer\Index_IDX_List_DateTimeValue.sql" />
+    <None Include="Resources\SqlServer\Index_IDX_List_Decimal.sql" />
+    <None Include="Resources\SqlServer\Index_IDX_List_DecimalValue.sql" />
+    <None Include="Resources\SqlServer\Index_IDX_List_Double.sql" />
+    <None Include="Resources\SqlServer\Index_IDX_List_DoubleValue.sql" />
+    <None Include="Resources\SqlServer\Index_IDX_List_Guid.sql" />
+    <None Include="Resources\SqlServer\Index_IDX_List_GuidValue.sql" />
+    <None Include="Resources\SqlServer\Index_IDX_List_Int16.sql" />
+    <None Include="Resources\SqlServer\Index_IDX_List_Int16Value.sql" />
+    <None Include="Resources\SqlServer\Index_IDX_List_Int32.sql" />
+    <None Include="Resources\SqlServer\Index_IDX_List_Int32Value.sql" />
+    <None Include="Resources\SqlServer\Index_IDX_List_Int64.sql" />
+    <None Include="Resources\SqlServer\Index_IDX_List_Int64Value.sql" />
+    <None Include="Resources\SqlServer\Index_IDX_List_Single.sql" />
+    <None Include="Resources\SqlServer\Index_IDX_List_SingleValue.sql" />
+    <None Include="Resources\SqlServer\Index_IDX_List_String.sql" />
+    <None Include="Resources\SqlServer\Index_IDX_List_StringValue.sql" />
+    <None Include="Resources\SqlServer\Table_DataObjectField.sql" />
+    <None Include="Resources\SqlServer\Table_DataObjectRelationship.sql" />
+    <None Include="Resources\SqlServer\Table_List_Boolean.sql" />
+    <None Include="Resources\SqlServer\Table_List_BooleanValue.sql" />
+    <None Include="Resources\SqlServer\Table_List_Byte.sql" />
+    <None Include="Resources\SqlServer\Table_List_ByteValue.sql" />
+    <None Include="Resources\SqlServer\Table_List_DateTime.sql" />
+    <None Include="Resources\SqlServer\Table_List_DateTimeValue.sql" />
+    <None Include="Resources\SqlServer\Table_List_Decimal.sql" />
+    <None Include="Resources\SqlServer\Table_List_DecimalValue.sql" />
+    <None Include="Resources\SqlServer\Table_List_Double.sql" />
+    <None Include="Resources\SqlServer\Table_List_DoubleValue.sql" />
+    <None Include="Resources\SqlServer\Table_List_Guid.sql" />
+    <None Include="Resources\SqlServer\Table_List_GuidValue.sql" />
+    <None Include="Resources\SqlServer\Table_List_Int16.sql" />
+    <None Include="Resources\SqlServer\Table_List_Int16Value.sql" />
+    <None Include="Resources\SqlServer\Table_List_Int32.sql" />
+    <None Include="Resources\SqlServer\Table_List_Int32Value.sql" />
+    <None Include="Resources\SqlServer\Table_List_Int64.sql" />
+    <None Include="Resources\SqlServer\Table_List_Int64Value.sql" />
+    <None Include="Resources\SqlServer\Table_List_Single.sql" />
+    <None Include="Resources\SqlServer\Table_List_SingleValue.sql" />
+    <None Include="Resources\SqlServer\Table_List_String.sql" />
+    <None Include="Resources\SqlServer\Table_List_StringValue.sql" />
+    <None Include="Resources\SqlServer\Table_DataObjectType.sql" />
+    <None Include="Resources\SqlServer\Table_DataObjectIndex.sql" />
+    <None Include="Resources\SqlServer\Table_DataObjectFieldType.sql" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+</Project>

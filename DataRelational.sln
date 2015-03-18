@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataRelational", "DataRelational\DataRelational.csproj", "{0B03A026-61D9-475C-AC5C-F8B99EA47D67}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataRelational.WpfTestApp", "DataRelational.WpfTestApp\DataRelational.WpfTestApp.csproj", "{21FA21F4-DC9B-4FC4-A3B9-F9592F5559DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvvmFoundation.Wpf", "MvvmFoundation.Wpf\MvvmFoundation.Wpf.csproj", "{2E922430-EAAC-4589-A8F4-F35FBB9799B8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0B03A026-61D9-475C-AC5C-F8B99EA47D67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B03A026-61D9-475C-AC5C-F8B99EA47D67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B03A026-61D9-475C-AC5C-F8B99EA47D67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B03A026-61D9-475C-AC5C-F8B99EA47D67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21FA21F4-DC9B-4FC4-A3B9-F9592F5559DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21FA21F4-DC9B-4FC4-A3B9-F9592F5559DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21FA21F4-DC9B-4FC4-A3B9-F9592F5559DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21FA21F4-DC9B-4FC4-A3B9-F9592F5559DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E922430-EAAC-4589-A8F4-F35FBB9799B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E922430-EAAC-4589-A8F4-F35FBB9799B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E922430-EAAC-4589-A8F4-F35FBB9799B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E922430-EAAC-4589-A8F4-F35FBB9799B8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+EndGlobal
